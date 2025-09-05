@@ -26,6 +26,7 @@ public class ConsoleLibrary {
 						System.out.println("Thank you for using the program.");
 					default:
 						System.out.println("Invalid Input. Try again.");
+						break;
 				}
 			}
 		}
@@ -98,7 +99,7 @@ public class ConsoleLibrary {
 	public static void MenuPrompt() {
 		System.out.println("===================================");
 		System.out.println("\t  LIBRARY CONSOLE");
-		System.out.println("===================================");
+		System.out.println("===================================\n");
 		System.out.println(" [1] View Books\n");
 		System.out.println(" [2] Exit");
 		System.out.println();
@@ -106,14 +107,15 @@ public class ConsoleLibrary {
 	
 	public static int validNumberInput(Scanner sc, String prompt) {
 		int num;
-		System.out.printf(prompt);
 		while (true) {
+			System.out.printf(prompt);
 			try {
 				String sNum = sc.nextLine().trim();
 				num = Integer.parseInt(sNum);
 				break;
 			}catch(NumberFormatException e) {
 				System.out.println("You entered invalid input. Try again.");
+				continue;
 			}
 		}
 		return num;
@@ -137,7 +139,7 @@ public class ConsoleLibrary {
 	            bookFound = true;
 	            System.out.println("Result(s): " + search.title +
 	                               " | Author: " + search.author +
-	                               " | [Genre]:  " + search.genre);
+	                               " | Genre: " + search.genre);
 	        }
 	    }
 
