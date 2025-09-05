@@ -135,7 +135,7 @@ public class ConsoleLibrary {
 	            bookFound = true;
 	            System.out.println("Result(s): " + search.title +
 	                               " | Author: " + search.author +
-	                               " [Genre] " + search.genre);
+	                               " | [Genre]:  " + search.genre);
 	        }
 	    }
 
@@ -152,18 +152,18 @@ public class ConsoleLibrary {
 		
 		for (Book b : books ) {
 			if (b.isAvailable == true) {
-				System.out.println("ISBN: " + b.ISBN +
-						"| Title: " + b.title + 
-						"| Author: " + b.author +
-						"| Genre: " + b.genre + 
-						"| Available: Yes"
+				System.out.println("Title: " + b.title +
+						" | Author: " + b.author + 
+						" | Genre: " + b.genre +
+						" | ISBN: " + b.ISBN + 
+						" | Available: Yes"
 						); 
 			} else if (b.isAvailable == false)  {
-				System.out.println("ISBN: " + b.ISBN +
-						"| Title: " + b.title + 
-						"| Author: " + b.author +
-						"| Genre: " + b.genre + 
-						"| Available: No"
+				System.out.println("Title: " + b.title +
+						" | Author: " + b.author + 
+						" | Genre: " + b.genre +
+						" | ISBN: " + b.ISBN + 
+						" | Available: No"
 						);
 			}
 		}
