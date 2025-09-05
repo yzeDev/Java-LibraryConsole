@@ -11,5 +11,5 @@ public class Book {
 		this.ISBN = ISBN;
 		this.isAvailable = isAvailable;
 	}
-
+	
 }

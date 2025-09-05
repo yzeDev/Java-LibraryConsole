@@ -24,6 +24,8 @@ public class ConsoleLibrary {
 					case 2:
 						System.exit(0);
 						System.out.println("Thank you for using the program.");
+					default:
+						System.out.println("Invalid Input. Try again.");
 				}
 			}
 		}
