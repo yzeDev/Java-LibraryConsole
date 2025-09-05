@@ -13,8 +13,8 @@ public class ConsoleLibrary {
 	public static void main(String[] args) {
 		BookDatabaseGenerate();
 		while (true) {
+			MenuPrompt();
 			while(!hasSelectedMenu) {
-				MenuPrompt();
 				menuSelection = validNumberInput(scanner, ">> ");
 				switch (menuSelection) {
 					case 1: 
@@ -25,7 +25,7 @@ public class ConsoleLibrary {
 						System.exit(0);
 						System.out.println("Thank you for using the program.");
 					default:
-						System.out.println("Invalid Input. Try again.");
+						System.out.println("\nInvalid Input. Try again.");
 						break;
 				}
 			}
@@ -148,7 +148,6 @@ public class ConsoleLibrary {
 	    }
 	}
 
-	
 	public static void viewBooks() {
 		System.out.println("===================================");
 		System.out.println("\t  BOOKS CATALOG");
@@ -177,6 +176,4 @@ public class ConsoleLibrary {
 			searchBook(scanner);
 		}
 	}
-	
-	
 }
