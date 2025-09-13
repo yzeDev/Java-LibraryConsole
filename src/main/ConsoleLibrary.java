@@ -127,8 +127,8 @@ public class ConsoleLibrary {
 	    boolean bookFound = false;
 	    String searchString = sc.nextLine().trim().toLowerCase();
 	    
-	    if (searchString.isEmpty() || searchString.contains("-") ) {
-	    	System.out.println("Book not found.");
+	    if (searchString.isEmpty()) {
+	    	System.out.println("Search bar cannot be blank.");
 	    	return;
 	    }
 
@@ -147,7 +147,8 @@ public class ConsoleLibrary {
 	            bookFound = true;
 	            System.out.println("Title: " + search.title +
 	                               " | Author: " + search.author +
-	                               " | Genre: " + search.genre);
+	                               " | Genre: " + search.genre +
+	            					"| ISBN: " +search.ISBN);
 	        }
 	    }
 	    System.out.println();
